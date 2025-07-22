@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 
+
 const orderSchema = new mongoose.Schema(
 	{
 		user: {
@@ -23,8 +24,8 @@ const orderSchema = new mongoose.Schema(
 					type: Number,
 					required: true,
 					min: 0,
-				},
-			},
+				}
+			}
 		],
 		totalAmount: {
 			type: Number,
@@ -35,9 +36,8 @@ const orderSchema = new mongoose.Schema(
 			type: String,
 			unique: true,
 		},
-	},
-	{ timestamps: true }
-);
+}, {timestamps: true});
+
 
 const Order = mongoose.model("Order", orderSchema);
 
